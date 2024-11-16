@@ -1,0 +1,104 @@
+body {
+    background-size: contain;
+    background-repeat: repeat;
+    background-image: url("./src/tecnoBodyBackground.png");
+    color: cyan;
+    font-family: "Doto";
+    font-size: large;
+    h1{font-size: larger;}
+  }
+  header, header div, ul{padding: 10px;}
+  header, header div, section{
+    width: 90%;
+    margin: 5%;
+  }
+  title, script{display: none;}
+  section{
+    background-size: cover;
+    background-repeat: repeat-y;
+    background-image: url("./src/tecnoSectionBackground.png");
+  }
+  header{
+    h1{align-self: flex-start;}
+    div{
+    background-color: black;
+    img{
+      position: absolute;
+      top: 45%;
+      left: 70%;
+      width: 12%;
+    }
+  }
+  ul{
+    position: relative;
+    right: 30%;
+  }
+}
+header::before{
+    content: url("./src/tecnolandIntroducer.png");
+    display: flex;
+    align-self: center;
+    outline-style: solid;
+    outline-width: 3px;
+    outline-color: cyan;
+  }
+  ul{
+    list-style: url("./src/tecnoListStyle.png");
+    width: fit-content;
+  }
+  p{width: 95%;}
+  a{
+    text-decoration: none;
+    color: crimson;
+  }
+  a:hover{color: orange;}
+  .futuristicOutline{
+    outline-style: solid;
+    outline-width: 3px;
+    outline-color: cyan;
+  }
+  .column, .row{
+    display: flex;
+    align-items: space-around;
+    justify-content: center;
+  }
+  .column{
+    flex-direction: column;
+    align-items: center;
+  }
+  .row{flex-direction: row;}
+  .smallerDiv{
+    margin: 5%;
+    padding: 1%;
+    width: 45%;
+    font-size: medium;
+  }
+  @media screen and (max-width: 830px) {
+    header{
+      img{display: none;}
+    }
+    ul{
+      outline-style: solid;
+      outline-width: 1px;
+      outline-color: cyan;
+      list-style: none;
+    }
+  }
+  @media screen and (max-width: 850px) {
+    section{
+      width: 110%;
+      margin: 0;
+    }
+    header{
+      ul{
+        font-size: medium;
+        list-style: none;
+        right: 0;
+      }
+      img{display: none;}
+    }
+    img{width: 100%;}
+    .row{flex-direction: column;}
+    .column{padding: 5%;}
+  }
+  @media screen and (max-height: 1480px) and (max-width: 1560px){header div img{top: 25%;}}
